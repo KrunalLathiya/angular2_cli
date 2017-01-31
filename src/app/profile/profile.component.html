@@ -1,0 +1,11 @@
+
+<div class="container">
+	<div class="row">
+		<div *ngFor="let item of profile" class="col-md-4">
+			{{item.name}}
+			<img src="{{item.url}}" width="300" height="300">
+			{{item.price}}
+			<app-add-to-cart [id] = "item.id"></app-add-to-cart>
+		</div>
+	</div>
+</div>

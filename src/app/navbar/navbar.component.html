@@ -1,0 +1,14 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+         <a class="navbar-brand" href="#">AL</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a *ngIf="myValue==true" [routerLink]="['/']" >Home</a></li>
+          <li><a *ngIf="myValue==false" [routerLink]="['/signup']">Sign Up</a></li>
+          <li><a *ngIf="myValue==false" [routerLink]="['/login']">Log In</a></li>
+          <li><a *ngIf="myValue==true" [routerLink]="['/logout']">Logout</a></li>
+          <li><a *ngIf="myValue==true" [routerLink]="['/cart']">Shopping Cart  <span class="label label-success">{{totalQty}}</span></a></li>
+        </ul>
+    </div>
+  </nav>

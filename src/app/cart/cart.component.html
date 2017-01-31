@@ -1,0 +1,16 @@
+<table class="table table-striped">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>URL</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let cartDetails of cart">
+    <td>{{cartDetails.cartID}}</td>
+    <td>{{cartDetails.name}}</td>
+    <td>{{cartDetails.price}}</td>
+    <td>{{cartDetails.url}}</td>
+    <td><button type="button" class="btn btn-danger" (click)="removeItem(cartDetails.cartID)">Delete</button></td>
+  </tr>
+</table>
